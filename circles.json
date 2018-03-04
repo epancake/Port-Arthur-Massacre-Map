@@ -1,0 +1,53 @@
+{"objects":[
+  {"circle":
+    {"title": "Martin Bryant's House",
+      "coordinates":[-42.865016, 147.307676],
+      "id":1,
+      "color": "rgb(34, 147, 56)",
+      "description":"Martin Bryant woke up at 6am at his house, a property that he inherited from his girlfriend who died earlier that year in a car crash. Martin was in the car with her when she died. He told police that she drove off of the road to avoid a dog that was jumping around. Martin was known to have taken the wheel while Mrs. Harvey was driving, causing multiple previous accidents.",
+      "image":"./mBryantHouse.jpeg",
+      "zoom":"12"
+
+    }
+  },
+  {"circle":
+    {"title": "Seascape Guesthouse Cottage",
+      "coordinates":[-43.108038,147.864674],
+      "id":2,
+      "color": "blue",
+      "description":"He woke up at 6am..",
+      "image":"a",
+      "zoom":"12"
+    }
+  },
+  {"circle":
+    {"title": "Port Arthur Restaurant",
+      "coordinates":[-43.146289,147.851488],
+      "id":3,
+      "color": "red",
+      "description":"He woke up at 6am..",
+      "image":"a",
+      "zoom":"16"
+    }
+  },
+  {"circle":
+    {"title": "Port Arthur Gift Shop",
+      "coordinates":[-43.145631,147.850501],
+      "id":4,
+      "color": "red",
+      "description":"He woke up at 6am..",
+      "image":"a",
+      "zoom":"16"
+    }
+  },
+  {"circle":
+    {"title": "Port Arthur Parking Lot",
+      "coordinates":[-43.145248,147.851295],
+      "id":5,
+      "color": "red",
+      "description":"He woke up at 6am..",
+      "image":"a",
+      "zoom":"16"
+    }
+  }
+]}

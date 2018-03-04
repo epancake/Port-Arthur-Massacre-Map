@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>d3.js with leaflet.js</title>
+	<link
+			rel="stylesheet"
+			href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
+	/>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript" src="circles.json"></script>
+
+	<script
+			src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
+	</script>
+
+	<style type="text/css">
+
+	body {
+		margin: 0;
+		font-family: sans-serif;
+		font-size: 11px;
+		height: 100vh
+	}
+
+	.axis path, .axis line {
+		fill: none;
+		stroke: black;
+		shape-rendering: crispEdges;  /* Round any decimal pixels so it'll render nicely */
+	}
+
+	.storyMap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.storyImage {
+		width: 20rem;
+	}
+
+	aside {
+		width: 25rem;
+	}
+
+	#map {
+		width: 100px;
+	}
+
+</style>
+
+</head>
+<body>
+	<h2>The Port Arthur Massacre</h2>
+	<p>
+		In 1996, Martin Bryant armed himself with xxx guns, and set about on a shooting spree that killed 35 people in Port Arthur, a town in Tasmania, Australia. He traveled from his home to 5 different locations where he shot and killed innocent men, women, and children along the way. This is a map of the chronology of that day.
+	</p>
+	<h2>Map of the Port Arthur Massacre</h2>
+	<p>Hover over the circles to let the story unfold.</p>
+	<div class=storyMap>
+		<div id="map" style="width: 1000px; height: 750px"></div>
+		<aside id="storyCard">
+			<h4 id="storyTitle"></h4>
+			<div id="storyDescription"></div>
+			<image id="storyImage" class="storyImage" src=""></image>
+		</aside>
+	</div>
+
+
+
+	<script src="./app.js"></script>
+</body>
+</html>
