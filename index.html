@@ -30,7 +30,7 @@
 
 	.storyMap {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	.storyImage {
@@ -38,11 +38,7 @@
 	}
 
 	aside {
-		width: 25rem;
-	}
-
-	#map {
-		width: 100px;
+		width: 20%;
 	}
 
 </style>
@@ -55,12 +51,14 @@
 	</p>
 	<h2>Map of the Port Arthur Massacre</h2>
 	<p>Hover over the circles to let the story unfold.</p>
-	<div class=storyMap>
+	<div id="mapKey"></div>
+	<div class="storyMap">
 		<div id="map" style="width: 1000px; height: 750px"></div>
 		<aside id="storyCard">
 			<h4 id="storyTitle"></h4>
 			<div id="storyDescription"></div>
-			<image id="storyImage" class="storyImage" src=""></image>
+			<image id="storyImage1" class="storyImage" src=""></image>
+			<image id="storyImage2" class="storyImage" src=""></image>
 		</aside>
 	</div>
 

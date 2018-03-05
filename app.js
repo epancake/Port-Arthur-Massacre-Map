@@ -1,4 +1,4 @@
-var map = L.map("map").setView([-43.141533, 147.651459], 10);
+var map = L.map("map").setView([-43.041533, 147.651459], 10);
 mapLink =
    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 L.tileLayer(
@@ -28,7 +28,7 @@ d3.json("./circles.json", function(collection) {
     .enter().append("circle")
     .style("stroke", "black")
     .style("opacity", .6)
-    .attr("r", 20)
+    .attr("r", 15)
     .on("mouseover", handleMouseOver)
     .on("mouseout", handleMouseOut);
 
@@ -60,8 +60,10 @@ d3.json("./circles.json", function(collection) {
     map.setView(d.circle.coordinates, d.circle.zoom)
     document.getElementById("storyTitle").innerHTML = d.circle.title
     document.getElementById("storyDescription").innerHTML = d.circle.description
-    document.getElementById("storyImage").src = d.circle.image
+    document.getElementById("storyImage1").src = d.circle.image1
+    document.getElementById("storyImage2").src = d.circle.image2
     addBtn()
+    addResetBtn()
 
   }
 
@@ -77,6 +79,22 @@ d3.json("./circles.json", function(collection) {
     }
   }
 
+  function addResetBtn () {
+    $aside = document.getElementById("storyCard")
+    if (!document.getElementById("resetBtn")) {
+      var resetBtn = document.createElement("button")
+      var t = document.createTextNode("Reset Map")
+      resetBtn.setAttribute("id", "resetBtn")
+      resetBtn.appendChild(t);
+      resetBtn.addEventListener("click", resetMap);
+      document.getElementById("storyCard").appendChild(resetBtn)
+    }
+  }
+
+  function resetMap () {
+    map.setView([-43.141533, 147.651459], 10)
+  }
+
   function moveToNext () {
     console.log("currentCircleId", currentCircleId)
     d3.json("./circles.json", function(collection) {
@@ -85,7 +103,9 @@ d3.json("./circles.json", function(collection) {
           map.setView(d.circle.coordinates, d.circle.zoom)
           document.getElementById("storyTitle").innerHTML = d.circle.title
           document.getElementById("storyDescription").innerHTML = d.circle.description
-          document.getElementById("storyImage").src = d.circle.image
+          document.getElementById("storyImage1").src = d.circle.image1
+          document.getElementById("storyImage2").src = d.circle.image2
+
           addBtn()
         }
       })
