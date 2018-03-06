@@ -38,8 +38,97 @@
 	}
 
 	aside {
-		width: 20%;
+		width: 40vw;
+		margin: 3rem;
 	}
+
+	.d3-slider {
+    position: relative;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+    border: 1px solid #aaaaaa;
+    z-index: 2;
+	}
+
+	.d3-slider-horizontal {
+	    height: .8em;
+	}
+
+	.d3-slider-range {
+	  background:#2980b9;
+	  left:0px;
+	  right:0px;
+	  height: 0.8em;
+	  position: absolute;
+	}
+
+	.d3-slider-range-vertical {
+	  background:#2980b9;
+	  left:0px;
+	  right:0px;
+	  position: absolute;
+	  top:0;
+	}
+
+	.d3-slider-vertical {
+	    width: .8em;
+	    height: 100px;
+	}
+
+	.d3-slider-handle {
+	    position: absolute;
+	    width: 1.2em;
+	    height: 1.2em;
+	    border: 1px solid #d3d3d3;
+	    border-radius: 4px;
+	    background: #eee;
+	    background: linear-gradient(to bottom, #eee 0%, #ddd 100%);
+	    z-index: 3;
+	}
+
+	.d3-slider-handle:hover {
+	    border: 1px solid #999999;
+	}
+
+	.d3-slider-horizontal .d3-slider-handle {
+	    top: -.3em;
+	    margin-left: -.6em;
+	}
+
+	.d3-slider-axis {
+	    position: relative;
+	    z-index: 1;
+	}
+
+	.d3-slider-axis-bottom {
+	    top: .8em;
+	}
+
+	.d3-slider-axis-right {
+	    left: .8em;
+	}
+
+	.d3-slider-axis path {
+	    stroke-width: 0;
+	    fill: none;
+	}
+
+	.d3-slider-axis line {
+	    fill: none;
+	    stroke: #aaa;
+	    shape-rendering: crispEdges;
+	}
+
+	.d3-slider-axis text {
+	    font-size: 11px;
+	}
+
+	.d3-slider-vertical .d3-slider-handle {
+	    left: -.25em;
+	    margin-left: 0;
+	    margin-bottom: -.6em;
+	}
+
 
 </style>
 
@@ -49,17 +138,16 @@
 	<p>
 		In 1996, Martin Bryant armed himself with xxx guns, and set about on a shooting spree that killed 35 people in Port Arthur, a town in Tasmania, Australia. He traveled from his home to 5 different locations where he shot and killed innocent men, women, and children along the way. This is a map of the chronology of that day.
 	</p>
-	<h2>Map of the Port Arthur Massacre</h2>
-	<p>Hover over the circles to let the story unfold.</p>
-	<div id="mapKey"></div>
+	<div id="slider3"></div>
 	<div class="storyMap">
-		<div id="map" style="width: 1000px; height: 750px"></div>
 		<aside id="storyCard">
 			<h4 id="storyTitle"></h4>
-			<div id="storyDescription"></div>
+			<div id="storyDescription">Move the slider forward to let the story unfold.</div>
 			<image id="storyImage1" class="storyImage" src=""></image>
 			<image id="storyImage2" class="storyImage" src=""></image>
 		</aside>
+		<div id="map" style="width: 55vw; height: 65vh; margin-right: 3rem"></div>
+
 	</div>
 
 
